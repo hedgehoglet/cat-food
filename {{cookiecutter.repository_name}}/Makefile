@@ -17,4 +17,4 @@ init:
 	git init
 
 setup: init install
-	@echo "🦔 | $$(date "+%F %T") | Opening {{cookiecutter.directory_name}} package..."
+	@echo "🦔 | $$(date "+%F %T") | Opening {{cookiecutter.repository_name}} package..."

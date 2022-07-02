@@ -1,10 +1,10 @@
-# {{cookiecutter.directory_name}}
+# {{cookiecutter.repository_name}}
 
 [![Formatted with black](https://img.shields.io/badge/format-black-black)](https://github.com/psf/black)
 [![Checked with pylint](https://img.shields.io/badge/check-pylint-yellowgreen)](https://github.com/PyCQA/pylint)
 [![Checked with mypy](https://img.shields.io/badge/check-mypy-blue)](http://mypy-lang.org/)
 
-{{cookiecutter.description}}
+{{cookiecutter.repository_description}}
 
 ## Set up the environment
 * Get your [Poetry](https://python-poetry.org/docs/#installation)

@@ -26,8 +26,8 @@ cookiecutter https://github.com/hedgehoglet/cat-food.git
 ├── README.md                       # describe your project
 ├── notebooks                       # store notebooks
 ├── pyproject.toml                  # dependencies for poetry
-└── {{cookiecutter.directory_name}}
-        ├── __init__.py                     # make {{cookiecutter.directory_name}} a Python module
+└── {{cookiecutter.repository_name}}
+        ├── __init__.py                     # make {{cookiecutter.repository_name}} a Python module
         ├── src                             # store source code
         │   └── __init__.py                 # make src a Python module
         └── tests                           # store tests
