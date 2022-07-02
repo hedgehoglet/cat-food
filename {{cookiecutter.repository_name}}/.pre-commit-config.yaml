@@ -29,4 +29,5 @@ repos:
     rev: 1.5.0
     hooks:
       - id: interrogate
-        args: [-vv, -i, -I]
+        args: [-vv, -i, -I, --fail-under=90]
+        exclude: __init__.py
