@@ -6,15 +6,23 @@ REPOSITORY_REGEX = r"^[_a-zA-Z][-_a-zA-Z0-9]+$"
 MAX_REPOSITORY_NAME_LENGTH = 64
 MAX_REPOSITORY_DESCRIPTION_LENGTH = 1024
 
-repository_name = "{{cookiecutter.repository_name}}"
-repository_description = "{{cookiecutter.repository_description}}"
 
-
-def validate_repository():
+def validate_repository(
+    repository_name: str,
+    repository_description: str,
+):
     """
-    Validate repository name and description based on some constraints
+    Validate repository name and description based on some certain criteria such as name and description length
 
-    :return: repository status as boolean
+    Args:
+        repository_name::str
+            Repostory name
+        repository_description::str
+            Repository description
+
+    Returns:
+        repository_status::bool
+            Is repository information meet the criteria?
     """
 
     if not re.match(REPOSITORY_REGEX, repository_name):
@@ -33,7 +41,18 @@ def validate_repository():
 
 
 if __name__ == "__main__":
-    repository_status = validate_repository()
+    repository_name = "{{cookiecutter.repository_name}}"
+    repository_description = "{{cookiecutter.repository_description}}"
 
-    if not repository_status:
+    logging.basicConfig(level=logging.INFO)
+
+    repository_status = validate_repository(
+        repository_name,
+        repository_description,
+    )
+
+    if repository_status:
+        logging.info(f"{repository_name} is successfully created!")
+    else:
+        logging.info(f"{repository_description} is failed to created!")
         sys.exit(-1)
