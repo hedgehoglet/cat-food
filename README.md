@@ -26,12 +26,13 @@ cookiecutter https://github.com/hedgehoglet/cat-food.git
 ├── README.md                       # describe your project
 ├── notebooks                       # store notebooks
 ├── pyproject.toml                  # dependencies for poetry
-└── {{cookiecutter.repository_name}}
-        ├── __init__.py                     # make {{cookiecutter.repository_name}} a Python module
-        ├── src                             # store source code
-        │   └── __init__.py                 # make src a Python module
-        └── tests                           # store tests
-            └── __init__.py                 # make tests a Python module
+├── {{cookiecutter.__repository_name}}/
+│        ├── __init__.py                     # make {{cookiecutter.__repository_name}} a Python module
+│        ├── src                             # store source code
+│        │   └── __init__.py                 # make src a Python module
+│        └── tests                           # store tests
+│            └── __init__.py                 # make tests a Python module
+└── notebooks/                      # store ipynb files
 ```
 
 ## How Is Cat Food Made?
