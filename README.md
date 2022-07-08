@@ -32,7 +32,8 @@ cookiecutter https://github.com/hedgehoglet/cat-food.git
 │        │   └── __init__.py                 # make src a Python module
 │        └── tests                           # store tests
 │            └── __init__.py                 # make tests a Python module
-└── notebooks/                      # store ipynb files
+└── notebooks/                               # store ipynb files
+         └── playground.ipynb                # pre-defined jupyter notebook playground
 ```
 
 ## How Is Cat Food Made?
