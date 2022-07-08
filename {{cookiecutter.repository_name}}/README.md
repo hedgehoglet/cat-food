@@ -13,7 +13,7 @@
 make activate
 make setup
 ```
-    
+
 ## Install new packages
 * To install new PyPI packages, run:
 ```bash
