@@ -16,25 +16,31 @@ def validate_repository(
 
     Args:
         repository_name::str
-            Repostory name
+            Repostory name (64 characters)
         repository_description::str
-            Repository description
+            Repository description (1024 characters)
 
     Returns:
         repository_status::bool
             Is repository information meet the criteria?
     """
+    repository_name_length = len(repository_name)
+    repository_description_length = len(repository_description)
 
     if not re.match(REPOSITORY_REGEX, repository_name):
-        logging.error(f"{repository_name} is not a valid repository name!")
+        logging.error(f"{repository_name} is not a valid repository name! ({REPOSITORY_REGEX})")
         return False
 
-    if len(repository_name) > MAX_REPOSITORY_NAME_LENGTH:
-        logging.error(f"{repository_name} is too long to be valid repository name!")
+    if repository_name_length > MAX_REPOSITORY_NAME_LENGTH:
+        logging.error(
+            f"{repository_name} is too long to be repository name! ({repository_name_length}/{MAX_REPOSITORY_NAME_LENGTH})"
+        )
         return False
 
-    if len(repository_description) > MAX_REPOSITORY_DESCRIPTION_LENGTH:
-        logging.error(f"{repository_name} have too long description!")
+    if repository_description_length > MAX_REPOSITORY_DESCRIPTION_LENGTH:
+        logging.error(
+            f"{repository_name} have too long description! ({repository_description_length}/{MAX_REPOSITORY_DESCRIPTION_LENGTH})"
+        )
         return False
 
     return True
@@ -44,7 +50,10 @@ if __name__ == "__main__":
     repository_name = "{{cookiecutter.repository_name}}"
     repository_description = "{{cookiecutter.repository_description}}"
 
-    logging.basicConfig(level=logging.INFO)
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s :: 🦔🐈 :: %(levelname)s :: %(message)s",
+    )
 
     repository_status = validate_repository(
         repository_name,
