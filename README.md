@@ -24,13 +24,12 @@ cookiecutter https://github.com/hedgehoglet/cat-food.git
 ├── LICENSE                         # license of your project
 ├── Makefile                        # store useful commands to set up the environment
 ├── README.md                       # describe your project
-├── notebooks                       # store notebooks
 ├── pyproject.toml                  # dependencies for poetry
 ├── {{cookiecutter.__repository_name}}/
 │        ├── __init__.py                     # make {{cookiecutter.__repository_name}} a Python module
-│        ├── src                             # store source code
+│        ├── src/                            # store source code
 │        │   └── __init__.py                 # make src a Python module
-│        └── tests                           # store tests
+│        └── tests/                          # store tests
 │            └── __init__.py                 # make tests a Python module
 └── notebooks/                               # store ipynb files
          └── playground.ipynb                # pre-defined jupyter notebook playground
