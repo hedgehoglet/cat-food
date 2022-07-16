@@ -17,7 +17,7 @@ pyenv install 3.9.13
 pyenv local 3.9.13
 ```
 * Get your [Poetry](https://python-poetry.org/docs/#installation)
-* Set up the environment:
+* Execute Makefile to get the environment ready
 ```bash
 make activate
 make setup
