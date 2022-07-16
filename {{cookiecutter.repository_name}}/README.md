@@ -24,7 +24,7 @@ make setup
 ```
 
 ## Install new packages
-* To install new PyPI packages, run:
+* To install new PyPI packages, run
 ```bash
 poetry add <package-name>
 ```
