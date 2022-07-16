@@ -4,12 +4,12 @@ Cat food is available to almost everyone, no matter where they live, and contain
 
 ## Getting Started
 
-* Install [Cookiecutter](https://github.com/cookiecutter/cookiecutter):
+* Install [Cookiecutter](https://github.com/cookiecutter/cookiecutter)
 ```bash
 pip install cookiecutter
 ```
 
-* Open your bag with cookiecutter:
+* Open your bag with cookiecutter
 ```bash
 cookiecutter https://github.com/hedgehoglet/cat-food.git
 ```
